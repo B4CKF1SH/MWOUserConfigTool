@@ -82,20 +82,6 @@ public class MainWindow {
         fileMenu.add(exit);
     }
 
-    /*{
-        for (Preset p : OptionsLibrary.getPresetList()) {
-            comboBox1.addItem(p);
-        }
-
-        comboBox1.addActionListener((e) -> {
-            Preset p = (Preset) comboBox1.getSelectedItem();
-            List<Option> optionList = OptionsLibrary.getOptionList();
-            for (int i = 0; i < p.values.size(); i++) {
-                optionList.get(i).setValue(p.values.get(i));
-            }
-        });
-    }*/
-
     {
         searchButton.addActionListener((e) -> {
             showOptions(textField1.getText().strip());
@@ -104,6 +90,10 @@ public class MainWindow {
         clearButton.addActionListener((e) -> {
             textField1.setText("");
             showOptions("");
+        });
+
+        generateUserCfgButton.addActionListener((e) -> {
+            System.out.println(ConfigLib.createConfig());
         });
     }
 
