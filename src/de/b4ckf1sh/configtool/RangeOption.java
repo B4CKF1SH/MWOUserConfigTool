@@ -27,6 +27,7 @@ public class RangeOption extends Option {
         ((JSlider) cb).setPaintTicks(false);
         ((JSlider) cb).setValue(defaultValue);
         ((JSlider) cb).setPaintLabels(true);
+        ((JSlider) cb).setSnapToTicks(true);
         cb.setSize(100, 40);
         cb.setPreferredSize(new Dimension(100, 40));
         cb.revalidate();

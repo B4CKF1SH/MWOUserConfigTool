@@ -22,9 +22,9 @@ public class SelectOption extends Option{
 
         for (int i = 0; i < values.length; i++) {
             ((JComboBox) cb).addItem(String.format("%s - %s", values[i], descs[i]));
-            ((JComboBox) cb).setToolTipText(description);
-            ((JComboBox) cb).setSelectedIndex(defaultValue);
         }
+
+        ((JComboBox) cb).setSelectedIndex(defaultValue);
     }
 
     public Component getComponent() {
