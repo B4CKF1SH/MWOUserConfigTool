@@ -93,6 +93,7 @@ public class MainWindow {
         });
 
         generateUserCfgButton.addActionListener((e) -> {
+            //TODO: save to file
             System.out.println(ConfigLib.createConfig());
         });
     }
